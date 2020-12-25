@@ -122,7 +122,7 @@ func init() {
 			setLogFile(l, logFilepath.Native())
 
 			if *options.verbose {
-				astilog.SetDefaultLogger()
+				astilog.SetLogger(astilog.New(astilog.Configuration{Verbose: true}))
 			}
 		}
 
